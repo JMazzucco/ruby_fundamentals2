@@ -19,6 +19,13 @@ puts ""
 students.each {|cohort, num| students[cohort] = (num * 1.05).to_i}
 display_cohorts(students)
 
+#removed cohort 2 from hash
 puts ""
 students.delete(:cohort2)
 display_cohorts(students)
+
+#display the total amount of students in all cohorts
+puts ""
+total_students = 0
+students.each {|cohort, num| total_students += num}
+puts "Total number of students: #{total_students}"
