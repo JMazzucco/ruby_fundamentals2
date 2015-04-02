@@ -8,10 +8,11 @@ grocery_list << "rice"
 
 #method that puts each item when the grocery list array is passed to it
 def display_list(grocery_list)
-	grocery_list.sort.each {|item| puts item}
+	grocery_list.sort.each {|item| puts "* #{item}"}
 	"Total Items: #{grocery_list.count}"
 end
 
+#call method and pass it the grocery list array as the argument
 puts display_list(grocery_list)
 
 #check grocery list for bananas
@@ -23,4 +24,11 @@ end
 
 #display second item in the grocery list
 puts grocery_list[1]
+
+#delete salmon from the grocery list
+grocery_list.delete("salmon")
+
+#display updated grocery list
+puts display_list(grocery_list)
+
 
